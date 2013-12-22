@@ -158,7 +158,7 @@ namespace Hik.Communication.ScsServices.Client
         private void RequestReplyMessenger_MessageReceived(object sender, MessageEventArgs e)
         {
             //Cast message to ScsRemoteInvokeMessage and check it
-            var invokeMessage = e.Message as ScsRemoteInvokeMessage;
+            var invokeMessage = e.Message as IScsRemoteInvokeMessage;
             if (invokeMessage == null)
             {
                 return;
@@ -205,13 +205,12 @@ namespace Hik.Communication.ScsServices.Client
         {
             try
             {
-                _requestReplyMessenger.SendMessage(
-                    new ScsRemoteInvokeReturnMessage
-                    {
-                        RepliedMessageId = requestMessage.MessageId,
-                        ReturnValue = returnValue,
-                        RemoteException = exception
-                    });
+                var message = _client.WireProtocol.MessageFactory.CreateMessage<IScsRemoteInvokeReturnMessage>();
+                message.RepliedMessageId = requestMessage.MessageId;
+                message.ReturnValue = returnValue;
+                message.RemoteException = exception;
+
+                _requestReplyMessenger.SendMessage(message);
             }
             catch
             {

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using Hik.Communication.Scs.Communication.Messages;
+using Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages;
 
 namespace Hik.Communication.Scs.Communication.Protocols.BinarySerialization
 {
@@ -311,5 +312,10 @@ namespace Hik.Communication.Scs.Communication.Protocols.BinarySerialization
         }
 
         #endregion
+
+        public IMessageFactory MessageFactory
+        {
+            get { return new MessageFactory(); }
+        }
     }
 }

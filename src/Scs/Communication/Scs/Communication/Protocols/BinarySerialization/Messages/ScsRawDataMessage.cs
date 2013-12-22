@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hik.Communication.Scs.Communication.Messages
+namespace Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages
 {
     /// <summary>
     /// This message is used to send/receive a raw byte array as message data.

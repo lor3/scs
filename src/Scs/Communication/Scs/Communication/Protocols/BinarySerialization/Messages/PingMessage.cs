@@ -1,13 +1,14 @@
 ﻿using System;
+using Hik.Communication.Scs.Communication.Messages;
 
-namespace Hik.Communication.Scs.Communication.Messages
+namespace Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages
 {
     /// <summary>
     /// This message is used to send/receive ping messages.
     /// Ping messages is used to keep connection alive between server and client.
     /// </summary>
     [Serializable]
-    public sealed class ScsPingMessage : ScsMessage
+    public sealed class ScsPingMessage : ScsMessage, IPingMessage
     {
         ///<summary>
         /// Creates a new PingMessage object.

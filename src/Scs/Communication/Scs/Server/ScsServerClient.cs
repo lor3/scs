@@ -4,6 +4,7 @@ using Hik.Communication.Scs.Communication.EndPoints;
 using Hik.Communication.Scs.Communication.Messages;
 using Hik.Communication.Scs.Communication.Channels;
 using Hik.Communication.Scs.Communication.Protocols;
+using Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages;
 
 namespace Hik.Communication.Scs.Server
 {

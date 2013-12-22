@@ -3,6 +3,7 @@ using Hik.Communication.Scs.Communication;
 using Hik.Communication.Scs.Communication.Messages;
 using Hik.Communication.Scs.Communication.Channels;
 using Hik.Communication.Scs.Communication.Protocols;
+using Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages;
 using Hik.Threading;
 
 namespace Hik.Communication.Scs.Client

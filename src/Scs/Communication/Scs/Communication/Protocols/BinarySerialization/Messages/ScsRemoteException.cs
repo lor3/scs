@@ -8,7 +8,7 @@ namespace Hik.Communication.ScsServices.Communication.Messages
     /// This exception is used to send an exception from an application to another application.
     /// </summary>
     [Serializable]
-    public class ScsRemoteException : Exception
+    public class ScsRemoteException : Exception, IScsRemoteException
     {
         /// <summary>
         /// Contstructor.
@@ -47,5 +47,21 @@ namespace Hik.Communication.ScsServices.Communication.Messages
         {
 
         }
+
+        #region Implementation of IScsRemoteException
+
+        /// <inheritdoc />
+        string IScsRemoteException.Type
+        {
+            get { return GetType().FullName; }
+        }
+
+        /// <inheritdoc />
+        IScsRemoteException IScsRemoteException.InnerException
+        {
+            get { return InnerException != null ? null : null; }
+        }
+
+        #endregion
     }
 }

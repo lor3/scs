@@ -1,6 +1,7 @@
 ﻿using System;
+using Hik.Communication.Scs.Communication.Messages;
 
-namespace Hik.Communication.Scs.Communication.Messages
+namespace Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages
 {
     /// <summary>
     /// Represents a message that is sent and received by server and client.

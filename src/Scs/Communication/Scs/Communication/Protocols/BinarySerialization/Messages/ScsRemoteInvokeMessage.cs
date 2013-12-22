@@ -1,7 +1,6 @@
 ﻿using System;
-using Hik.Communication.Scs.Communication.Messages;
 
-namespace Hik.Communication.ScsServices.Communication.Messages
+namespace Hik.Communication.Scs.Communication.Protocols.BinarySerialization.Messages
 {
     /// <summary>
     /// This message is sent to invoke a method of a remote application.

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Hik.Communication.Scs.Communication.Messages;
 
 namespace Hik.Communication.Scs.Communication.Protocols
@@ -35,5 +36,7 @@ namespace Hik.Communication.Scs.Communication.Protocols
         /// So, wire protocol must reset itself.
         /// </summary>
         void Reset();
+
+        IMessageFactory MessageFactory { get; };
     }
 }
